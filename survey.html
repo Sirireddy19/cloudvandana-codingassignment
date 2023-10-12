@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="container">
+    <h1>Survey Form</h1>
+    <form id="survey-form" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="date-of-birth">Date of Birth:</label>
+            <input type="date" id="date-of-birth" required>
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" required>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <!-- Add more countries here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="checkbox" id="male" name="gender" value="Male"label for="male">Male</label>
+            <input type="checkbox" id="female" name="gender" value="Female"label for="female">Female</label>
+        </div>
+        <div class="form-group">
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="tel" id="mobile-number" required>
+        </div>
+        <div class="form-group">
+            <label>Is this first time you are using our products & services?</label>
+                <input type="checkbox" id="yes" name="is this first time You are using our products & services?"value="yes"label for="yes">yes</label>
+                <input type="checkbox" id="no" name="is this first time You are using our products & services?"value="no"label for="no">no</label>
+            
+        </div>
+        <div class="form-group">
+            <label>Would you suggestion to your friends and colleague?</label>
+                <input type="checkbox" id="yes" name="would you suggestion to your friends and colleague?"value="yes"label for="yes">yes</label>
+                <input type="checkbox" id="no" name="would you suggestion to your friends and colleague?"value="no"label for="no">no</label>
+            
+        </div>
+        <div class="form-group">
+            <label>How satisfied are  you with our company overall?</label>
+                <input type="checkbox" id="satisfied" name="how satisfied are  you with our company overall?"value="satisfied"label for="satisfied">satisfied</label>
+                <input type="checkbox" id="undecided" name="how satisfied are  you with our company overall?"value="undecided"label for="undecided">undecided</label>
+                <input type="checkbox" id="unsatisfied" name="how satisfied are  you with our company overall?"value="satisfied"label for="unsatisfied">unsatisfied</label>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit-btn">Submit</button>
+            <button type="button" id="reset-btn" onclick="resetForm()">Reset</button>
+        </div>
+    </form>
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <h2>Survey Summary</h2>
+            <p id="summary-text"></p>
+            <p id="success-message"></p>
+            <button id="close-popup" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
